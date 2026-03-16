@@ -31,7 +31,7 @@ This is a **Next.js 16** app (App Router) with WordPress integration using `'use
 
 The adapter at `pantheon-adapter.js` is configured via `experimental.adapterPath` — it makes the site expose cache tags to the internal router for CDN surrogate key headers.
 
-In-memory cache disabled (`cacheMaxMemorySize: 0`). Auto-selects GCS vs file-based storage based on `CACHE_BUCKET`.
+In-memory cache disabled (`cacheMaxMemorySize: 0`). Auto-selects GCS vs file-based storage (GCS is automatically configured when deployed on Pantheon).
 
 ### Data Flow
 
@@ -52,7 +52,6 @@ In-memory cache disabled (`cacheMaxMemorySize: 0`). Auto-selects GCS vs file-bas
 
 - `WORDPRESS_API_URL` — WordPress REST API base (default: `https://developer.wordpress.org/news/wp-json/wp/v2`)
 - `WEBHOOK_SECRET` — Shared secret for `/api/revalidate` (required)
-- `CACHE_BUCKET` — GCS bucket name (presence triggers GCS mode)
 
 ## Code Style Guidelines
 

@@ -103,7 +103,7 @@ const nextConfig = {
 | `cache-handler.mjs` | Legacy handler for ISR, route handlers, and fetch cache. Uses `createCacheHandler()` from the Pantheon package. |
 | `cacheHandlers/remote-handler.mjs` | Next.js 16 handler for the `'use cache'` directive. Uses `createUseCacheHandler()` and exports the instance directly. |
 
-Both auto-detect the storage backend — GCS when `CACHE_BUCKET` is set, file-based otherwise.
+Both auto-detect the storage backend — GCS when deployed on Pantheon, file-based for local development.
 
 
 ### Surrogate Key Tagging
@@ -156,4 +156,3 @@ WordPress post updated
 |---|---|---|
 | `WORDPRESS_API_URL` | WordPress REST API base URL | `https://developer.wordpress.org/news/wp-json/wp/v2` |
 | `WEBHOOK_SECRET` | Shared secret for authenticating `/api/revalidate` requests | — (required) |
-| `CACHE_BUCKET` | GCS bucket name (presence triggers GCS mode) | — |
