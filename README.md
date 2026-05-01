@@ -140,6 +140,10 @@ Install the mu-plugin from the [Pantheon WordPress revalidation tutorial](https:
 - Generates matching surrogate keys (`post-{id}`, `post-{slug}`, `post-list`, `term-{id}`)
 - Sends a non-blocking POST to your `/api/revalidate` endpoint with the `surrogate_keys` array
 
+### Pantheon Advanced Page Cache
+
+Install the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/) plugin for WordPress so that Pantheon's CDN has fresh content when WordPress pings Next.js to fetch the content.
+
 ### Surrogate Key Flow
 
 ```
